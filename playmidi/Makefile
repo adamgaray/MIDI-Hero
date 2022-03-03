@@ -1,6 +1,6 @@
 ### Example Makefile for MUMT-306 Homework assignments on OS-X systems
 
-PROGRAMS = playsmf
+PROGRAMS = playmidi
 RM = /bin/rm
 CC       = g++
 DEFS     = -D__MACOSX_CORE__
@@ -18,8 +18,8 @@ strip :
 	strip $(PROGRAMS)
 
 ## Include all source files necessary for a program in the dependencies and compiler statements below
-playsmf: playsmf.cpp RtMidi.o MidiFileIn.o Stk.o
-	$(CC) $(CFLAGS) $(DEFS) -o playsmf playsmf.cpp RtMidi.o MidiFileIn.o Stk.o $(LIBRARY)
+playmidi: playmidi.cpp RtMidi.o MidiFileIn.o Stk.o
+	$(CC) $(CFLAGS) $(DEFS) -o playmidi playmidi.cpp RtMidi.o MidiFileIn.o Stk.o $(LIBRARY)
 
 RtMidi.o: RtMidi.cpp RtMidi.h
 	$(CC) $(CFLAGS) $(DEFS) -c RtMidi.cpp -o RtMidi.o
