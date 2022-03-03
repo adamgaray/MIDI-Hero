@@ -1,12 +1,6 @@
 # MIDI Hero
 
-"Guitar Hero" type game that involves timing button presses to flashing lights corresponding to MIDI events. Created for MUMT 306 Final Project.
-
-## Introduction
-
-As someone relatively new to electronics and other concepts covered over the semester, when designing a project for this course, I wanted something relatively simple that involved, at some level, all of the main ideas of MUMT 306. I wanted something that incorporated the Arduino Uno such that the user could do something on the breadboard, and I could control it with a .ino program. I wanted to use Max to incorporate serial communication, and I wanted to use RtMidi to control playback of MIDI files. As well, at some level I wanted to involve sequencing, whether it was with the Arduino, Max, or RtMidi. Most of all, I wanted something that I could have fun with, and enjoy using as well as making.
-
-MIDI Hero incorporates all of this into a miniature, MIDI version of a "Guitar Hero" type game (hence the name). It can play a MIDI file, and will flash different LED lights corresponding to each note. Afterwards, it will repeat the file, so that the user can try and match the timing of the flashing LEDs by pressing a button. An RGB light indicates how accurate the timing of the button press was: green means very good, red means very bad, and yellowish colours mean somewhere in between. As well, the user can generate a random sequence of notes, and play a memorization game.
+"Guitar Hero" type game that involves timing button presses to flashing lights corresponding to MIDI events. MIDI Hero can play a MIDI file, and will flash different LED lights corresponding to each note. Afterwards, it will repeat the file, so that the user can try and match the timing of the flashing LEDs by pressing a button. An RGB light indicates how accurate the timing of the button press was: green means very good, red means very bad, and yellowish colours mean somewhere in between. As well, the user can generate a random sequence of notes, and play a memorization game.
 
 ## Usage
 
@@ -57,7 +51,3 @@ The `midiparse` object is used to receive MIDI input, check for NoteOn messages 
 Overall, the project development process was relatively smooth. Most of the effort was in developing the Arduino program. The Max patch is simple and I already had a template for `playmidi.cpp` so all that needed to be written was the random sequence generator. The most time was used in figuring out how the LEDs would light and how the button timing mechanism would work. As well, it took some trial and error figuring out exactly how I wanted the RGB to light, to make sure I had a reasonable balance of green or red or something in between. Personally, I have very little prior experience in electronics, so perhaps more time than expected was used to figure out and put together the circuits.
 
 MIDI Hero is clearly just a prototype. Since the Arduino Uno only has 12 digital pins when using serial communication, only 5 note values are possible. In a full implementation, perhaps all 12 notes could be used, although this would make for a harder game. As well, using the LCD screen to act as a menu would be a nice feature, and would greater add to the feeling of an actual game, as opposed to using the command line. However, given the scope and amount of time dedicated, I think a reasonable prototype was created that achieved all the goals of this project.
-
-## Conclusion
-
-I'm happy with what I've created. This was an excellent way to dive a bit deeper into some concepts seen in lectures, and actually creating something myself was a great experience. While there are certainly many ways to improve this project, overall I achieved the goals I set for myself, and also had fun doing it.
